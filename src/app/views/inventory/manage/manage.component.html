@@ -21,7 +21,7 @@
           </tr>
         </thead>
         <tbody>
-          @for (inventory of invetoryArr | search :text :'inventoryName'; track inventory.inventoryId) {
+          @for (inventory of invetoryArr ; track inventory.inventoryId) {
             <tr>
               <td>{{inventory.inventoryId}}</td>
               <td>{{inventory.inventoryName}}</td>

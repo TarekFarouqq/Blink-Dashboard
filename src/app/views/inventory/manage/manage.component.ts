@@ -5,13 +5,12 @@ import { SpinnerComponent } from '@coreui/angular';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
-import { SearchPipe } from '../../shared/search.pipe';
 import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-manage',
-  imports: [SpinnerComponent,CommonModule, RouterLink ,SearchPipe,FormsModule],
+  imports: [SpinnerComponent,CommonModule, RouterLink ,FormsModule],
   templateUrl: './manage.component.html',
   styleUrl: './manage.component.scss'
 })
@@ -61,9 +60,6 @@ invetoryArr!: Inventory[];
       next: (res) => {
         this.getAllInventories();
         console.log('Inventory deleted successfully');
-      },
-      error: (err) => {
-        console.error(err);
       }
     });
       }
